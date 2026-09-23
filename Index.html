@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Pizzaria Q-Delícia — pizzas, hambúrgueres, esfihas e lanches caprichados.">
-    <meta name="theme-color" content="#000000">
+    <meta name="description"
+        content="Pizzaria Q-Delícia — pizzas, hambúrgueres, esfihas e lanches caprichados.">
 
     <title>Pizzaria Q-Delícia</title>
 
@@ -19,7 +20,7 @@
 
         :root {
             --preto: #050505;
-            --preto-2: #101010;
+            --preto2: #111111;
             --vermelho: #e50914;
             --vermelho-hover: #ff1a25;
             --branco: #ffffff;
@@ -43,25 +44,26 @@
             left: 0;
             width: 100%;
             height: 80px;
+
             background: rgba(0, 0, 0, 0.96);
+
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             padding: 0 6%;
+
             z-index: 1000;
+
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .logo {
-            color: var(--branco);
-            font-size: 1.35rem;
-            font-weight: 800;
+            color: white;
             text-decoration: none;
+            font-size: 1.35rem;
+            font-weight: 900;
             white-space: nowrap;
-        }
-
-        .logo::first-letter {
-            color: var(--vermelho);
         }
 
         nav {
@@ -71,7 +73,7 @@
         }
 
         nav a {
-            color: var(--branco);
+            color: white;
             text-decoration: none;
             font-size: 0.95rem;
             font-weight: 600;
@@ -84,54 +86,67 @@
 
         .header-buttons {
             display: flex;
-            align-items: center;
             gap: 10px;
+            align-items: center;
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
+
             min-height: 46px;
             padding: 0 22px;
+
             border-radius: 30px;
-            border: 2px solid transparent;
+            border: none;
+
             text-decoration: none;
-            font-weight: 800;
+
             font-size: 0.9rem;
+            font-weight: 800;
+
             cursor: pointer;
+
             transition: 0.3s ease;
         }
 
         .btn-red {
             background: var(--vermelho);
-            color: var(--branco);
+            color: white;
         }
 
         .btn-red:hover {
             background: var(--vermelho-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(229, 9, 20, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(229, 9, 20, 0.35);
         }
 
         .btn-white {
-            background: var(--branco);
-            color: #000;
+            background: white;
+            color: black;
         }
 
         .btn-white:hover {
-            background: #e8e8e8;
-            transform: translateY(-2px);
+            background: #e5e5e5;
+            transform: translateY(-3px);
         }
+
+        /* MENU MOBILE */
 
         .menu-toggle {
             display: none;
-            background: none;
+
+            background: transparent;
             border: none;
+
             color: white;
+
             font-size: 30px;
+
             cursor: pointer;
         }
+
 
         /* =========================
            BANNER
@@ -139,37 +154,46 @@
 
         .hero {
             min-height: 100vh;
-            background:
-                linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.78)),
-                url("images/banner.jpg") center/cover no-repeat;
 
             display: flex;
             align-items: center;
+
             padding: 120px 6% 80px;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.65),
+                    rgba(0, 0, 0, 0.80)
+                ),
+                url("banner.jpg") center center / cover no-repeat;
         }
 
         .hero-content {
             max-width: 850px;
         }
 
-        .hero-content h1 {
+        .hero h1 {
             font-size: clamp(2.8rem, 7vw, 6rem);
             line-height: 1;
             font-weight: 900;
+
             margin-bottom: 25px;
         }
 
-        .hero-content h1 span {
+        .hero h1 span {
             display: block;
             color: var(--vermelho);
         }
 
-        .hero-content p {
-            max-width: 760px;
+        .hero p {
+            max-width: 800px;
+
             color: #eeeeee;
+
             font-size: clamp(1rem, 2vw, 1.25rem);
+
             font-weight: 700;
-            letter-spacing: 0.5px;
+
             margin-bottom: 35px;
         }
 
@@ -178,6 +202,7 @@
             gap: 15px;
             flex-wrap: wrap;
         }
+
 
         /* =========================
            SEÇÕES
@@ -195,6 +220,7 @@
         .section-title h2 {
             font-size: clamp(2rem, 4vw, 3.2rem);
             font-weight: 900;
+
             margin-bottom: 10px;
         }
 
@@ -204,9 +230,8 @@
 
         .section-title p {
             color: var(--cinza);
-            max-width: 650px;
-            margin: auto;
         }
+
 
         /* =========================
            CARDÁPIO
@@ -219,570 +244,32 @@
         .menu-grid {
             max-width: 1200px;
             margin: auto;
+
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+
             gap: 28px;
         }
 
         .food-card {
             background: #151515;
+
             border-radius: 18px;
-            overflow: hidden;
+
+            padding: 35px 25px;
+
+            text-align: center;
+
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-            transition: 0.35s ease;
+
             border: 1px solid rgba(255, 255, 255, 0.06);
+
+            transition: 0.35s ease;
         }
 
         .food-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.5);
+            transform: translateY(-8px);
+
             border-color: rgba(229, 9, 20, 0.5);
-        }
 
-        .food-image {
-            width: 100%;
-            height: 230px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .food-content {
-            padding: 25px;
-        }
-
-        .food-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        .food-content p {
-            color: var(--cinza);
-            margin-bottom: 22px;
-            min-height: 50px;
-        }
-
-        .food-content .btn {
-            width: 100%;
-        }
-
-        /* =========================
-           SOBRE NÓS
-        ========================= */
-
-        #sobre {
-            background: var(--preto);
-        }
-
-        .about {
-            max-width: 950px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .about p {
-            color: #d0d0d0;
-            font-size: 1.1rem;
-            line-height: 1.9;
-        }
-
-        /* =========================
-           CONTATO
-        ========================= */
-
-        #contato {
-            background:
-                linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
-                url("images/banner.jpg") center/cover no-repeat;
-            text-align: center;
-        }
-
-        .contact-box {
-            max-width: 800px;
-            margin: auto;
-        }
-
-        .contact-box h2 {
-            font-size: clamp(2.3rem, 5vw, 4rem);
-            margin-bottom: 10px;
-        }
-
-        .contact-box h2 span {
-            color: var(--vermelho);
-        }
-
-        .contact-box p {
-            color: #ddd;
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-
-        /* =========================
-           RODAPÉ
-        ========================= */
-
-        footer {
-            background: #000;
-            text-align: center;
-            padding: 30px 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        footer p {
-            color: #aaa;
-            margin: 5px;
-        }
-
-        /* =========================
-           ANIMAÇÃO
-        ========================= */
-
-        .fade-in {
-            animation: fadeIn 1s ease forwards;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* =========================
-           TABLET
-        ========================= */
-
-        @media (max-width: 1050px) {
-
-            header {
-                padding: 0 4%;
-            }
-
-            nav {
-                gap: 16px;
-            }
-
-            .header-buttons .btn-white {
-                display: none;
-            }
-
-            .menu-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        /* =========================
-           CELULAR
-        ========================= */
-
-        @media (max-width: 760px) {
-
-            header {
-                height: 70px;
-                padding: 0 20px;
-            }
-
-            .logo {
-                font-size: 1.1rem;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            nav {
-                position: absolute;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background: #050505;
-                display: none;
-                flex-direction: column;
-                align-items: stretch;
-                gap: 0;
-                padding: 15px 20px 25px;
-                border-top: 1px solid #222;
-            }
-
-            nav.active {
-                display: flex;
-            }
-
-            nav a {
-                padding: 14px 5px;
-                border-bottom: 1px solid #222;
-            }
-
-            .header-buttons {
-                display: none;
-            }
-
-            .hero {
-                min-height: 100vh;
-                padding: 110px 20px 60px;
-            }
-
-            .hero-content h1 {
-                font-size: clamp(2.7rem, 14vw, 4.5rem);
-            }
-
-            .hero-content p {
-                font-size: 0.95rem;
-                line-height: 1.6;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .hero-buttons .btn {
-                width: 100%;
-            }
-
-            section {
-                padding: 75px 20px;
-            }
-
-            .menu-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .food-image {
-                height: 220px;
-            }
-
-            .about p {
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 400px) {
-
-            .logo {
-                font-size: 1rem;
-            }
-
-            .hero-content h1 {
-                font-size: 2.6rem;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- =========================
-         CABEÇALHO
-    ========================== -->
-
-    <header>
-
-        <a href="#inicio" class="logo">
-            🍕 Pizzaria Q-Delícia
-        </a>
-
-        <nav id="navMenu">
-            <a href="#inicio">Início</a>
-            <a href="#cardapio">Cardápio</a>
-            <a href="#sobre">Sobre nós</a>
-            <a href="#contato">Contato</a>
-        </nav>
-
-        <div class="header-buttons">
-            <a href="#cardapio" class="btn btn-white">
-                VER CARDÁPIO
-            </a>
-
-            <a href="https://wa.me/558896563971?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="btn btn-red">
-                PEDIR AGORA
-            </a>
-        </div>
-
-        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
-            ☰
-        </button>
-
-    </header>
-
-
-    <!-- =========================
-         BANNER PRINCIPAL
-    ========================== -->
-
-    <main>
-
-        <section class="hero" id="inicio">
-
-            <div class="hero-content fade-in">
-
-                <h1>
-                    Bem-vindo à
-                    <span>Pizzaria Q-Delícia</span>
-                </h1>
-
-                <p>
-                    PIZZA QUENTINHA, ESFIHAS, HAMBURGUERES E AQUELE
-                    LANCHE CAPRICHADO PARA MATAR A FOME DE VERDADE
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="#cardapio" class="btn btn-red">
-                        VER CARDÁPIO
-                    </a>
-
-                    <a href="https://wa.me/558896563971?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="btn btn-white">
-                        FAZER PEDIDO
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             CARDÁPIO
-        ========================== -->
-
-        <section id="cardapio">
-
-            <div class="section-title">
-
-                <h2>
-                    Nosso <span>Cardápio</span>
-                </h2>
-
-                <p>
-                    Escolha seu lanche favorito e faça seu pedido pelo WhatsApp.
-                </p>
-
-            </div>
-
-
-            <div class="menu-grid">
-
-                <!-- PIZZA -->
-
-                <article class="food-card">
-
-                    <img
-                        src="images/pizza.jpg"
-                        alt="Pizza da Pizzaria Q-Delícia"
-                        class="food-image"
-                    >
-
-                    <div class="food-content">
-
-                        <h3>Pizza</h3>
-
-                        <p>
-                            Pizza quentinha, saborosa e preparada com muito capricho.
-                        </p>
-
-                        <a href="https://wa.me/558896563971?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="btn btn-red">
-                            Pedir agora
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- HAMBÚRGUER -->
-
-                <article class="food-card">
-
-                    <img
-                        src="images/hamburguer.jpg"
-                        alt="Hambúrguer da Pizzaria Q-Delícia"
-                        class="food-image"
-                    >
-
-                    <div class="food-content">
-
-                        <h3>Hambúrgueres</h3>
-
-                        <p>
-                            Hambúrgueres caprichados para deixar seu lanche ainda melhor.
-                        </p>
-
-                        <a href="https://wa.me/558896563971?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="btn btn-red">
-                            Pedir agora
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ESFIHA -->
-
-                <article class="food-card">
-
-                    <img
-                        src="images/esfiha.jpg"
-                        alt="Esfiha da Pizzaria Q-Delícia"
-                        class="food-image"
-                    >
-
-                    <div class="food-content">
-
-                        <h3>Esfihas</h3>
-
-                        <p>
-                            Esfihas deliciosas, fresquinhas e preparadas com ingredientes selecionados.
-                        </p>
-
-                        <a href="https://wa.me/558896563971?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="btn btn-red">
-                            Pedir agora
-                        </a>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             SOBRE NÓS
-        ========================== -->
-
-        <section id="sobre">
-
-            <div class="about">
-
-                <div class="section-title">
-
-                    <h2>
-                        Sobre <span>nós</span>
-                    </h2>
-
-                </div>
-
-                <p>
-                    A Pizzaria Q-Delícia é uma pizzaria focada em sabor,
-                    qualidade e lanches caprichados. Nosso objetivo é preparar
-                    pizzas, hambúrgueres, esfihas e outros lanches deliciosos
-                    para deixar seu momento ainda mais especial.
-                </p>
-
-                <br>
-
-                <p>
-                    Tudo é preparado com carinho para levar até você aquele
-                    sabor que dá vontade de pedir de novo.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             CONTATO
-        ========================== -->
-
-        <section id="contato">
-
-            <div class="contact-box">
-
-                <h2>
-                    Ficou <span>com fome?</span>
-                </h2>
-
-                <p>
-                    Faça seu pedido agora pelo WhatsApp!
-                </p>
-
-                <a href="https://wa.me/558896563971?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="btn btn-red">
-                    🍕 PEDIR AGORA
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================
-         RODAPÉ
-    ========================== -->
-
-    <footer>
-
-        <p>
-            © 2026 Pizzaria Q-Delícia
-        </p>
-
-        <p>
-            Todos os direitos reservados.
-        </p>
-
-    </footer>
-
-
-    <!-- =========================
-         JAVASCRIPT
-    ========================== -->
-
-    <script>
-
-        const menuToggle = document.getElementById("menuToggle");
-        const navMenu = document.getElementById("navMenu");
-
-        // Abrir e fechar menu no celular
-        menuToggle.addEventListener("click", () => {
-            navMenu.classList.toggle("active");
-
-            if (navMenu.classList.contains("active")) {
-                menuToggle.innerHTML = "✕";
-            } else {
-                menuToggle.innerHTML = "☰";
-            }
-        });
-
-
-        // Fechar menu ao clicar em um link
-        document.querySelectorAll("nav a").forEach(link => {
-
-            link.addEventListener("click", () => {
-
-                navMenu.classList.remove("active");
-                menuToggle.innerHTML = "☰";
-
-            });
-
-        });
-
-    </script>
-
-</body>
-</html>
+            box-shadow: 0 18px 35px rgba(0,
